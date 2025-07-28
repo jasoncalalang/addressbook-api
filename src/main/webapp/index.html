@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .endpoint {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #0066cc;
+        }
+        code {
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .method {
+            font-weight: bold;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Address Book API</h1>
+        <p>Welcome to the Jakarta EE Address Book API powered by OpenLiberty and Apache Derby.</p>
+        
+        <h2>API Endpoints</h2>
+        <p>All endpoints are available under <code>/api/addressbook</code></p>
+        
+        <div class="endpoint">
+            <span class="method">GET</span> <code>/api/addressbook</code><br>
+            Get all contacts
+        </div>
+        
+        <div class="endpoint">
+            <span class="method">GET</span> <code>/api/addressbook/{id}</code><br>
+            Get contact by ID
+        </div>
+        
+        <div class="endpoint">
+            <span class="method">POST</span> <code>/api/addressbook</code><br>
+            Create new contact
+        </div>
+        
+        <div class="endpoint">
+            <span class="method">PUT</span> <code>/api/addressbook/{id}</code><br>
+            Update existing contact
+        </div>
+        
+        <div class="endpoint">
+            <span class="method">DELETE</span> <code>/api/addressbook/{id}</code><br>
+            Delete contact
+        </div>
+        
+        <div class="endpoint">
+            <span class="method">GET</span> <code>/api/addressbook/search?name={name}</code><br>
+            Search contacts by name
+        </div>
+        
+        <h2>Contact Data Structure</h2>
+        <pre><code>{
+  "id": 1,
+  "name": "John Doe",
+  "phoneNumber": "+1-555-0123",
+  "address": "123 Main St, Anytown, USA"
+}</code></pre>
+        
+        <h2>Technologies Used</h2>
+        <ul>
+            <li>Jakarta EE 10</li>
+            <li>OpenLiberty</li>
+            <li>Apache Derby Database</li>
+            <li>Java 17</li>
+            <li>Maven</li>
+        </ul>
+    </div>
+</body>
+</html>
